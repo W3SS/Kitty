@@ -1,0 +1,49 @@
+<div class="level">
+  <button class="button is-primary"
+  ng-click="$ctrl.newKittyForm = !$ctrl.newKittyForm"
+  >New Kitty</button>
+</div>
+<div class="columns is-mobile" ng-show="$ctrl.newKittyForm">
+  <div class="column is-mobile is-three-fifths">
+    <div class="field">
+      <label class="label">Name:</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="Name"
+        ng-model="$ctrl.kitty.name">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Age:</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="Age"
+        ng-model="$ctrl.kitty.age">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Breed:</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="Breed"
+        ng-model="$ctrl.kitty.breed">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Temperament:</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="Temperament"
+        ng-model="$ctrl.kitty.temperament">
+      </div>
+    </div>
+  </div>
+</div>
+<button class="button is-info"
+ng-show="$ctrl.newKittyForm"
+ng-click=$ctrl.create()>Save</button>
+
+
+<ul class="kitties">
+  <kitty-detail ng-repeat="kitty in $ctrl.kitties"
+  kitty="kitty"
+  on-delete="$ctrl.deleteKitty(kitty, $index)"
+  on-update="$ctrl.updateKitty(kitty, name, breed, temperament)">
+  </kitty-detail>
+</ul>

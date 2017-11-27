@@ -1,0 +1,63 @@
+<div class="content">
+<div class="columns is-mobile">
+  <div class="column is-mobile is-three-fifths">
+    <p class="title is-6">Name:</p>
+    <p ng-hide="$ctrl.showEditing">{{ $ctrl.kitty.name }} </p>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="Name"
+        ng-model="$ctrl.kitty.name"
+        ng-show="$ctrl.showEditing">
+      </div>
+    </div>
+    <p class="title is-6">Age:</p>
+    <p ng-hide="$ctrl.showEditing">{{ $ctrl.kitty.age }} </p>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="Age"
+        ng-model="$ctrl.kitty.age"
+        ng-show="$ctrl.showEditing">
+      </div>
+    </div>
+    <p class="title is-6">Breed:</p>
+    <p ng-hide="$ctrl.showEditing">{{ $ctrl.kitty.breed }} </p>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="Breed"
+        ng-model="$ctrl.kitty.breed"
+        ng-show="$ctrl.showEditing">
+      </div>
+    </div>
+    <p class="title is-6">Temperament:</p>
+    <p ng-hide="$ctrl.showEditing">{{ $ctrl.kitty.temperament }} </p>
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input" placeholder="Temperament"
+        ng-model="$ctrl.kitty.temperament"
+        ng-show="$ctrl.showEditing">
+      </div>
+    </div>
+  </div>
+  <div class="column is-mobile is-narrow">
+    <button class="button is-info"
+    ng-click="$ctrl.showEditing = !$ctrl.showEditing">
+      <span class="icon is-small">
+        <i class="fa fa-edit"></i>
+      </span>
+    </button>
+  </div>
+  <div class="column is-mobile is-narrow">
+    <button class="button is-danger is-outlined"
+    ng-click="$ctrl.deleteKitty()">
+      <span class="icon is-small">
+        <i class="fa fa-times"></i>
+      </span>
+    </button>
+  </div>
+</div>
+<div class="columns is-mobile" ng-show="$ctrl.showEditing">
+    <div class="column is-mobile is-one-quorter">
+      <button class="button is-info" ng-click="$ctrl.save()">Save</button>
+    </div>
+</div>
+</div>

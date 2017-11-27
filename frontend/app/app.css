@@ -1,0 +1,8 @@
+.section {
+  padding: 1rem 1.5rem;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 0;
+}
