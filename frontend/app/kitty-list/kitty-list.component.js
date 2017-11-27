@@ -8,16 +8,6 @@ angular.
     controller: ['$scope', 'Kitty', 
       function KittyListController($scope, Kitty) {
         this.kitties = Kitty.query();
-
-        // this.updateKitty = function(Kitty, kitty, name, breed, temperament) {
-        //   Kitty.$update(
-        //     {kittyId: kitty.id},
-        //     {
-        //       name: name,
-        //       breed: breed,
-        //       temperament: temperament
-        //     });
-        // };
         
         this.kitty = {};
         this.newKittyForm = false;
@@ -47,27 +37,6 @@ angular.
           this.newKittyForm = false;
           
         };
-      
-        const Kittyk = {
-          post (musicianData, token) {
-            HTTP.defaults.headers.common['Authorization'] = 'Token ' + token
-            return HTTP.post('/musicians/', {
-              first_name: musicianData.firstName,
-              second_or_father_name: musicianData.secondName,
-              last_name: musicianData.lastName
-            })
-              .then(response => {
-                return response.data
-              })
-            .catch(function (error) {
-              console.log(error)
-            })
-          },
-          delete (musicianPK, token) {
-            HTTP.defaults.headers.common['Authorization'] = 'Token ' + token
-            return HTTP.delete(`/musicians/${musicianPK}/`)
-          }
-        }
 
         this.updateKitty = function(kitty, name, breed, temperament) {
           return HTTP.put(`/kitties/${kitty.id}/`, {
