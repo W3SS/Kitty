@@ -165,4 +165,4 @@ STATICFILES_FINDERS = (
 #         'rest_framework.authentication.SessionAuthentication',
 #     ),
 # }
-SECRET_KEY = 'z43=#+-98!os73ii!qc_fq4ob07mx=3m1ff_7s62s^q6o*5bn$'
+SECRET_KEY = ''
