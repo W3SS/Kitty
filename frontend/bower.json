@@ -1,0 +1,14 @@
+{
+  "name": "angular-kittyApp",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "axios": "0.16.x",
+    "bulma": "0.6.x",
+    "font-awesome": "4.7,x"
+  }
+}
